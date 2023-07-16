@@ -1,5 +1,4 @@
-import { FlatList, TouchableOpacity } from "react-native";
-import { Image, StyleSheet, View, Linking } from "react-native";
+import { TouchableOpacity, StyleSheet, View, Linking } from "react-native";
 import { AntDesign, Entypo, FontAwesome } from "@expo/vector-icons";
 
 const SocialLinks = () => {
