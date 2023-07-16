@@ -1,4 +1,5 @@
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, Linking } from "react-native";
+import SocialLinks from "./socialLinks";
 
 const About = () => {
   return (
@@ -9,6 +10,13 @@ const About = () => {
         alt="Me"
       />
       <Text style={styles.title}>Frontend Developer</Text>
+      <Text
+        style={styles.link}
+        onPress={() => Linking.openURL("https://alinavidi.dev/")}
+      >
+        https://alinavidi.dev/
+      </Text>
+      <SocialLinks />
     </View>
   );
 };
@@ -16,7 +24,6 @@ const About = () => {
 const styles = StyleSheet.create({
   container: {
     padding: 40,
-    flex: 1,
     alignItems: "center",
     justifyContent: "center",
   },
@@ -25,9 +32,15 @@ const styles = StyleSheet.create({
     height: 80,
     borderRadius: 50,
     marginBottom: 10,
+    borderWidth: 1,
+    borderColor: "#fff",
   },
   title: {
     fontSize: 20,
+  },
+  link: {
+    marginTop: 10,
+    color: "blue",
   },
 });
 
